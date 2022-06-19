@@ -15,8 +15,8 @@ public class User {
 	private boolean deleted;
 	
 	
-
-	public User(String username, String password, String name, String surname, Date birthdate, Gender gender,
+	public User() {}
+		public User(String username, String password, String name, String surname, Date birthdate, Gender gender,
 			UserRole userRole) {
 		super();
 		this.username = username;

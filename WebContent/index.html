@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Sports Facilities</title>
+    <meta charset="UTF-8" />
+    <!--  <link rel="stylesheet" type="text/css" href="styles.css" />-->
+
+    </head>
+
+    <body>
+    <div id="sportsFacilities">
+
+    <h1>{{title}}</h1>
+    <table border="1" id="tabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Grade</th>
+                <th>Status</th>
+                <th>Type</th>
+                
+            </tr>
+        </thead>
+
+        <tr v-for="sf in sportFacilities">
+
+            <td>{{sf.sportFacilityId}}</td>
+            <td>{{sf.name}}</td>
+            <td>{{sf.location}}</td>
+            <td>{{sf.averageGrade}}</td>
+            <td>{{ConvertStatus(sf)}}</td>
+            <td>{{sf.type}}</td>
+        </tr>
+
+
+    </table>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="app/sportFacilitiesShow.js"></script>
+    </body>
+
+</html>
