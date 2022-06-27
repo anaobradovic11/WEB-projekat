@@ -14,12 +14,14 @@ import javax.ws.rs.core.MediaType;
 
 import beans.Customer;
 import dao.CustomerDao;
+
 @Path("/customers")
 public class CustomerService {
     CustomerDao customerDao = new CustomerDao();
 
     @Context
     ServletContext ctx;
+    
     @SuppressWarnings("unused")
     public void init() {
         if (ctx.getAttribute("customers") == null) {
@@ -32,14 +34,14 @@ public class CustomerService {
                 + File.separator);
     }
     @GET
-    @Path("/getAllCustomers")
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Customer> getAllCustomers() {
         customerDao.setBasePath(getContext());
         return customerDao.getAllToList();
     }
     @POST
-    @Path("/createCustomer")
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public void createCustomer(Customer customer) {
