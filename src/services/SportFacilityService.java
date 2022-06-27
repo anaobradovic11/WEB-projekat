@@ -16,13 +16,10 @@ import dao.SportFacilityDao;
 
 
 @Path("/sportFacilities")
-public class SportFacilityService {
+public class SportFacilityService extends BaseService {
 	
 	SportFacilityDao sportFacilityDao = new SportFacilityDao();
 	
-	@Context
-	ServletContext ctx;
-	//@PostConstruct
 	@SuppressWarnings("unused")
 	public void init() {
 		if (ctx.getAttribute("sportFacilities") == null) {
@@ -31,10 +28,6 @@ public class SportFacilityService {
 		}
 	}
 	
-	public String getContext() {
-		return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "json"
-				+ File.separator);
-	}
 	
 	@GET
 	@Path("/")

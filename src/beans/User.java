@@ -14,6 +14,9 @@ public class User {
 	private UserRole userRole;
 	private boolean deleted;
 	
+	//naknadno dodala zbog logovanja
+	private boolean banned;
+	
 	
 	public User() {}
 		public User(String username, String password, String name, String surname, Date birthdate, Gender gender,
@@ -48,6 +51,7 @@ public class User {
 		}
 		this.birthdate = parseDate;
 	}
+	
 	public UserRole getUserRole() {
 		return userRole;
 	}
@@ -102,6 +106,13 @@ public class User {
 				+ ", birthdate=" + birthdate + ", gender=" + gender + ", userRole=" + userRole + ", deleted=" + deleted
 				+ "]";
 	}
+	public boolean isBanned() {
+		return banned;
+	}
+	public void setBanned(boolean banned) {
+		this.banned = banned;
+	}
+	
 	
 
 }

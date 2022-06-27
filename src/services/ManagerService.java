@@ -2,31 +2,34 @@ package services;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
-import javax.annotation.PostConstruct;
+
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.Consumes;
-//import javax.servlet.ServletContext;
+import javax.servlet.ServletContext;
 
 import beans.Manager;
 import dao.ManagerDao;
-import jakarta.servlet.ServletContext;
-@Path("managers")
+
+
+@Path("/managers")
 public class ManagerService {
 	
 	ManagerDao managerDao = new ManagerDao();
 	
 	@Context
 	ServletContext ctx;
+	
 	@SuppressWarnings("unused")
 	public void init() {
+		System.out.println("Manager Service init void");
 		if (ctx.getAttribute("managers") == null) {
+			System.out.println("ManagerService");
 			String contextPath = ctx.getRealPath("");
 			ctx.setAttribute("managers", new ManagerService());
 		}
