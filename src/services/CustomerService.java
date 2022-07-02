@@ -34,14 +34,13 @@ public class CustomerService {
                 + File.separator);
     }
     @GET
-    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Customer> getAllCustomers() {
         customerDao.setBasePath(getContext());
         return customerDao.getAllToList();
     }
+    
     @POST
-    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public void createCustomer(Customer customer) {

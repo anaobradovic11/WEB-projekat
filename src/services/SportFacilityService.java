@@ -30,7 +30,6 @@ public class SportFacilityService extends BaseService {
 	
 	
 	@GET
-	@Path("/")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<SportFacility> getFacilities() {
 		sportFacilityDao.setBasePath(getContext());
