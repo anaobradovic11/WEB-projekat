@@ -8,7 +8,6 @@ import java.util.Map;
 
 import com.google.gson.reflect.TypeToken;
 
-import beans.Customer;
 import beans.Trainer;
 
 public class TrainerDao  extends GenericDao<String,Trainer, TrainerDao>{

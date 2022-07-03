@@ -32,7 +32,7 @@ import dao.CustomerDao;
 import dao.ManagerDao;
 import dao.TrainerDao;
 
-@Path("login")
+@Path("/login")
 public class LoginService   {
 	CustomerDao customerDao = new CustomerDao();
 	ManagerDao managerDao = new ManagerDao();

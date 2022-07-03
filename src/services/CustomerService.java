@@ -18,10 +18,10 @@ import dao.CustomerDao;
 @Path("/customers")
 public class CustomerService {
     CustomerDao customerDao = new CustomerDao();
-
-    @Context
-    ServletContext ctx;
     
+    @Context
+	ServletContext ctx;
+
     @SuppressWarnings("unused")
     public void init() {
         if (ctx.getAttribute("customers") == null) {
@@ -29,10 +29,11 @@ public class CustomerService {
             ctx.setAttribute("customers", new CustomerService());
         }
     }
-    public String getContext() {
-        return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "json"
-                + File.separator);
-    }
+    
+	protected String getContext() {
+		return "D:\\Faks\\6.semestar\\Web programiranje\\projekat\\WEB-projekat\\build\\classes\\json";
+	}
+    
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
