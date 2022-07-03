@@ -83,13 +83,10 @@ Vue.component("register-user", {
     		<!---Gender--->
 
     		<!---Submit Button------>
-    		<div class="box" style="background: #2d3e3f">
+    		<div class="box" style="background: #6a9294">
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
     		</div>
     		<!---Submit Button----->
-    		<div>
-    			<button v-on:click="createCustomer(newCustomer)">Save</button>
-    		</div>
     		
     		<div>
     			<tr v-for="c in customers">

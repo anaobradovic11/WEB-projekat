@@ -16,11 +16,9 @@ import beans.Customer;
 import dao.CustomerDao;
 
 @Path("/customers")
-public class CustomerService {
+public class CustomerService extends BaseService{
     CustomerDao customerDao = new CustomerDao();
     
-    @Context
-	ServletContext ctx;
 
     @SuppressWarnings("unused")
     public void init() {
@@ -29,10 +27,6 @@ public class CustomerService {
             ctx.setAttribute("customers", new CustomerService());
         }
     }
-    
-	protected String getContext() {
-		return "D:\\Faks\\6.semestar\\Web programiranje\\projekat\\WEB-projekat\\build\\classes\\json";
-	}
     
     @GET
     @Path("/")

@@ -1,21 +1,78 @@
-Vue.component('log-in', {
+Vue.component("log-in", {
+	data: function(){
+		return{
+			users: null,
+			user : {username : "", password: ""},
+			username : "",
+			password : ""
+		}
+	},
 	template: `
-	<div>
-		<h1> Log In </h1>
-		
-		<form id="forma">
-			<table>
-				<tr><td>Username</td><td><input type="text" name="username"></td></tr>
-				<tr><td>Password</td><td><input type="password" name="password"></td></tr>
-				<tr><td><input type="submit" value="Login"></td></tr>
-				<tr>
+	
+	<div class="container">
+      <form @submit.prevent="LogIn" autocomplete="on">
+      <h1>Log In</h1>
+      
+        <!--Username-->
+    	<div class="box">
+          <label for="username" class="fl fontLabel"> Username: </label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text" name="username" placeholder="Username" v-model="username"
+              class="textBox" autofocus="on" required>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--Username-->
+    		
+    		<!---Password------>
+    		<div class="box">
+          <label for="password" class="fl fontLabel"> Password </label>
+    			<div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="Password" required name="password" placeholder="Password" class="textBox"
+    					v-model="password">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!---Password---->
+    		
+    		<!---Submit Button------>
+    		<div class="box" style="background: #6a9294">
+    				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
+    		</div>
+    		<!---Submit Button----->
+    		
+    		<tr>
 					<td><a href="#/register">Not Registered?</a></td>
 				</tr>
-				<tr>
-					<td><a href="#/sportFacilities">Prikaz tabela</a></td>
-				</tr>
-			</table>
-		</form>
-	</div>
-	`,
+	
+	 </form>
+  </div>`
+	,
+	methods : {
+		LogIn: function() {
+			console.log("aaa")
+			axios
+				.get('rest/login/loggedUser')
+				.then(response => {
+					console.log("data", response.data)
+					if(response.data){
+						this.user = response.data
+					}else{
+						this.user = {username: this.username, "password" : this.password}
+					}
+					console.log(this.user)
+					console.log(this.username, this.password)
+					axios
+						.post('rest/login/logInStatus', this.user)
+						.then(response => toast(""))
+					
+					})
+
+		}
+	},
+	
 });
