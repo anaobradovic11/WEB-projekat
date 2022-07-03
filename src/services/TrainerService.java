@@ -1,4 +1,5 @@
 package services;
+
 import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
@@ -12,6 +13,7 @@ import beans.Trainer;
 import dao.TrainerDao;
 
 @Path("/trainers")
+
 public class TrainerService extends BaseService{
     TrainerDao trainerDao = new TrainerDao();
 
@@ -36,6 +38,7 @@ public class TrainerService extends BaseService{
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public void createTrainer(Trainer trainer) {
+
         trainerDao.setBasePath(getContext());
         trainerDao.create(trainer);
     }

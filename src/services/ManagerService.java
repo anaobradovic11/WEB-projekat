@@ -1,6 +1,8 @@
 package services;
 
+
 import java.util.ArrayList;
+
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -18,6 +20,7 @@ public class ManagerService extends BaseService {
 	
 	ManagerDao managerDao = new ManagerDao();
 	
+
 	@SuppressWarnings("unused")
 	public void init() {
 		System.out.println("Manager Service init void");
@@ -27,9 +30,10 @@ public class ManagerService extends BaseService {
 			ctx.setAttribute("managers", new ManagerService());
 		}
 	}
-		
+
 	@POST
 	@Path("/")	
+
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void createManger(Manager manager) {

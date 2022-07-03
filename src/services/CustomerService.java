@@ -16,10 +16,10 @@ import beans.Customer;
 import dao.CustomerDao;
 
 @Path("/customers")
+
 public class CustomerService extends BaseService{
     CustomerDao customerDao = new CustomerDao();
     
-
     @SuppressWarnings("unused")
     public void init() {
         if (ctx.getAttribute("customers") == null) {
@@ -27,7 +27,7 @@ public class CustomerService extends BaseService{
             ctx.setAttribute("customers", new CustomerService());
         }
     }
-    
+
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration</title>
+		<meta charset="UTF-8" />
+	</head>
+
+	<body>
+		<div id="registrationForm">
+			<h1>{{title}}</h1>
+				<form @submit='createUser'>
+					<table>
+						<tr>
+							<td>Name</td>
+							<td><input type="text" name="name" v-model="newManager.name"></td>
+						</tr>
+						<tr>
+							<td>Surname</td>
+							<td><input type="text" name="surname" v-model="newManager.surname"></td>
+						</tr>
+						<tr>
+							<td>Gender</td>
+							<td><input type="checkbox" id="male" name="male" value="Male" v-model="maleSelected"><label>Male</label></td>
+							<td><input type="checkbox" id="female" name="female" value="Female" v-model="femaleSelected"><label>Female</label></td>
+						</tr>
+						<tr>
+							<td>Birthday</td>
+							<td><input type="date" id="birthday" name="birthday" /></td>
+						</tr>
+						<tr>
+							<td>Username</td>
+							<td><input type="text" name="username" v-model="newManager.username"></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="text" name="password" v-model="newManager.password"></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Register"></td>
+						</tr>
+						
+					</table>
+				</form>
+			</div>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.js"></script>
+	<script src="app/registration.js"></script>
+	</body>
+
+</html>
