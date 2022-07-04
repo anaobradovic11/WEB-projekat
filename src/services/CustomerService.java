@@ -29,7 +29,6 @@ public class CustomerService extends BaseService{
         }
     }
 
-    
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)

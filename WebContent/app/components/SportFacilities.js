@@ -1,7 +1,4 @@
 Vue.component('sport-facilities', {
-<<<<<<< HEAD
-	template: `<h1>Sport Facilities</h1>`,
-=======
 	data: function(){
 		return{
 			sportFacilities: null
@@ -45,5 +42,4 @@ Vue.component('sport-facilities', {
           .get('rest/sportFacilities/')
           .then(response => (this.sportFacilities = response.data))
     },
->>>>>>> feature/vue-router
 });

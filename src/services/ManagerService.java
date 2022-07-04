@@ -15,7 +15,6 @@ import dao.ManagerDao;
 
 
 @Path("/managers")
-
 public class ManagerService extends BaseService {
 	
 	ManagerDao managerDao = new ManagerDao();
@@ -29,7 +28,8 @@ public class ManagerService extends BaseService {
 			ctx.setAttribute("managers", new ManagerService());
 		}
 	}
-		
+
+
 	@POST
 	@Path("/")	
 	@Produces(MediaType.TEXT_PLAIN)

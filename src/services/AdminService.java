@@ -1,6 +1,5 @@
 package services;
 
-
 import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
@@ -17,7 +16,6 @@ import dao.AdminDao;
 @Path("/admins")
 public class AdminService extends BaseService {
     AdminDao adminDao = new AdminDao();
-
 
     @SuppressWarnings("unused")
     public void init() {
