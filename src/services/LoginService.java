@@ -32,7 +32,8 @@ import dao.CustomerDao;
 import dao.ManagerDao;
 import dao.TrainerDao;
 
-@Path("login")
+
+@Path("/login")
 public class LoginService   {
 	CustomerDao customerDao = new CustomerDao();
 	ManagerDao managerDao = new ManagerDao();
@@ -52,7 +53,7 @@ public class LoginService   {
 		}
 	}
 	public String getContext() {
-		return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "jsonData"
+		return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "json"
 				+ File.separator);
 	}
 	private void setLoggedInUser(String username) {
@@ -68,7 +69,7 @@ public class LoginService   {
 	}
 	@POST
 	@Path("logInStatus")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public boolean SuccesLoginIn(User user) {
 		UserState loginState = customerLogIn(user);
@@ -101,6 +102,7 @@ public class LoginService   {
 		trainerDao.setBasePath(getContext());
 		User user = new User();
 		String username = (String) ctx.getAttribute("username");
+		/* ctx.setAttribute("username", user.getUsername()); */
 		user.setUsername(username);
 		User trainer = trainerDao.getById(username);
 		if(trainer != null) {
@@ -112,7 +114,11 @@ public class LoginService   {
 		}
 		User customer = customerDao.getById(username);
 		if(customer != null) {
-			return customer;
+			System.out.println(customer.toString());
+			if(customer instanceof Customer)
+				System.out.println("yees");
+			return new User(customer.getUsername(), customer.getPassword(), customer.getName(),
+					customer.getSurname(), customer.getBirthdate(), customer.getGender(), customer.getUserRole());
 		}
 		User admin = adminDao.getById(username);
 		if(admin != null) {
@@ -273,4 +279,3 @@ public class LoginService   {
 
 
 }
-

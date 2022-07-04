@@ -16,12 +16,11 @@ import beans.Customer;
 import dao.CustomerDao;
 
 @Path("/customers")
-public class CustomerService {
-    CustomerDao customerDao = new CustomerDao();
 
-    @Context
-    ServletContext ctx;
+public class CustomerService extends BaseService{
+    CustomerDao customerDao = new CustomerDao();
     
+
     @SuppressWarnings("unused")
     public void init() {
         if (ctx.getAttribute("customers") == null) {
@@ -29,18 +28,18 @@ public class CustomerService {
             ctx.setAttribute("customers", new CustomerService());
         }
     }
-    public String getContext() {
-        return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "json"
-                + File.separator);
-    }
+
+    
     @GET
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Customer> getAllCustomers() {
         customerDao.setBasePath(getContext());
         return customerDao.getAllToList();
     }
-    
+
     @POST
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public void createCustomer(Customer customer) {

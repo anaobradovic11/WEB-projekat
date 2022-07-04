@@ -1,3 +1,13 @@
 {
-
+	"menadzer": {
+		"username": "menadzer",
+	    "password": "m1",
+	    "name": "Marko",
+	    "surname": "Markovic",
+	    "birthdate": null,
+	    "gender": "Male",
+	    "userRole": "CUSTOMER",
+	    "deleted": false,
+	    "sportFacilityId": "1"
+  	}
 }

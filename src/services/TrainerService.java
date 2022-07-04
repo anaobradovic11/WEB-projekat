@@ -1,26 +1,22 @@
 package services;
 
-import java.io.File;
 import java.util.ArrayList;
 
-import javax.servlet.ServletContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
+
 import javax.ws.rs.core.MediaType;
 
 import beans.Trainer;
 import dao.TrainerDao;
 
 @Path("/trainers")
-public class TrainerService {
+public class TrainerService extends BaseService{
     TrainerDao trainerDao = new TrainerDao();
 
-    @Context
-    ServletContext ctx;
     @SuppressWarnings("unused")
     public void init() {
         if (ctx.getAttribute("trainers") == null) {
@@ -28,12 +24,9 @@ public class TrainerService {
             ctx.setAttribute("trainers", new TrainerService());
         }
     }
-    public String getContext() {
-        return (ctx.getRealPath("") + "WEB-INF" + File.separator + "classes" + File.separator + "json"
-                + File.separator);
-    }
+    
     @GET
-    @Path("/getAllTrainers")
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Trainer> getAllTrainers() {
         trainerDao.setBasePath(getContext());
@@ -41,10 +34,10 @@ public class TrainerService {
     }
     
     @POST
-    @Path("/createTrainer")
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public void createCustomer(Trainer trainer) {
+    public void createTrainer(Trainer trainer) {
         trainerDao.setBasePath(getContext());
         trainerDao.create(trainer);
     }

@@ -30,6 +30,7 @@ public class User {
 		this.gender = gender;
 		this.userRole = userRole;
 		this.deleted = false;
+		this.banned = false;
 	}
 	public User(String username, String password, String name, String surname, String birthdate, Gender gender,
 			UserRole userRole) {
@@ -41,6 +42,7 @@ public class User {
 		this.gender = gender;
 		this.userRole = userRole;
 		this.deleted = false;
+		this.banned = false;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date parseDate = null;
 		try {
