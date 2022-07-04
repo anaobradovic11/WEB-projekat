@@ -1,1 +1,12 @@
-{}
+{
+	"trainer": {
+	    "username": "trainer",
+	    "password": "trainer",
+	    "name": "PROBAA",
+	    "surname": "PROBA",
+	    "birthdate" : null,
+	    "gender" : "MALE",
+	    "userRole" : "COACH",
+	    "deleted": false
+  }
+}

@@ -12,5 +12,15 @@
         "customerType": null,
         "collectedPoints": 0.0,
         "due": null  
-   }
+   },
+	  "Katarina": {
+	    "collectedPoints": 0.0,
+	    "username": "Katarina",
+	    "password": "1234",
+	    "name": "Katarina",
+	    "surname": "Artukov",
+	    "birthdate": "Jul 5, 2022, 2:00:00 AM",
+	    "deleted": false,
+	    "banned": false
+	  }
 }

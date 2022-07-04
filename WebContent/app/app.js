@@ -1,22 +1,22 @@
-const HomePage = {template: "<home-page></home-page>"}
-const SportFacilities = {template: "<sport-facilities></sport-facilities>"}
-const Registration = {template: '<register-user></register-user>'}
-const LogIn = {template: '<log-in></log-in>'}
+const HomePage = {template: '<div> <navigation-bar></navigation-bar><home-page></home-page></div>'}
+const SportFacilities = {template: '<sport-facilities></sport-facilities>'}
+const Registration = {template: '<div> <navigation-bar></navigation-bar><register-user></register-user></div>'}
+const Login = {template: '<div> <navigation-bar></navigation-bar><log-in></log-in></div>'}
 
 const router = new VueRouter({
 	mode: 'hash',
 	routes: [
 		{
-			path: "/", component: HomePage
+			path: '/', component: HomePage
 		},
 		{
-			path: "/sportFacilities", component: SportFacilities
+			path: '/sportFacilities', component: SportFacilities
 		},
 		{
 			path: '/register', component: Registration
 		},
 		{
-			path: '/login', component: LogIn
+			path: '/login', component: Login
 		}
 	]
 });

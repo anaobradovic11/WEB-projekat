@@ -1,1 +1,12 @@
-{}
+{  
+	"admin": {
+	    "username": "admin",
+	    "password": "admin",
+	    "name": "admin",
+	    "surname": "admin",
+	    "birthdate" : null,
+	    "gender" : "MALE",
+	    "userRole" : "ADMIN",
+	    "deleted": false
+	  }
+}
