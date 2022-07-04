@@ -1,17 +1,22 @@
-const HomePage = {template: '<div> <navigation-bar></navigation-bar><home-page></home-page></div>'}
+const HomePage = {template: '<div> <router-view></router-view></div>'}
 const SportFacilities = {template: '<sport-facilities></sport-facilities>'}
-const Registration = {template: '<div> <navigation-bar></navigation-bar><register-user></register-user></div>'}
-const Login = {template: '<div> <navigation-bar></navigation-bar><log-in></log-in></div>'}
+const Registration = {template: '<div> <register-user></register-user></div>'}
+const Login = {template: '<div><log-in></log-in></div>'}
 
 const router = new VueRouter({
 	mode: 'hash',
 	routes: [
+		
 		{
-			path: '/', component: HomePage
+			path: '/', component: HomePage,
+			children: [
+		      {
+		        path: '/',
+		        component: SportFacilities,
+		      }
+		    ],
 		},
-		{
-			path: '/sportFacilities', component: SportFacilities
-		},
+		
 		{
 			path: '/register', component: Registration
 		},
@@ -20,6 +25,7 @@ const router = new VueRouter({
 		}
 	]
 });
+
 
 var app = new Vue({
 	router,
