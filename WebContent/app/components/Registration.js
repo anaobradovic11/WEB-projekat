@@ -2,14 +2,16 @@ Vue.component("register-user", {
 	data: function(){
 		return{
 			customers: null,
-			newCustomer : {}
+			newCustomer : {username : "", password : "", name : "", surname : "", birthdate : null, gender  : null, userRole : null, deleted : false, banned : false, visitedFacilities : null, 
+						   customerType : null, collectedPoints : 0.0, due : null},
+			gender : "MALE"
 		}
 	},
 
 	template: `
 	
 	<div class="container">
-      <form @submit="createCustomer(newCustomer)" autocomplete="on">
+      <form @submit.prevent="createCustomer(newCustomer)" autocomplete="on">
       <h1>Register</h1>
         <!--First name-->
     		<div class="box">
@@ -77,8 +79,8 @@ Vue.component("register-user", {
     		<!---Gender----->
     		<div class="box radio">
           <label for="gender" class="fl fontLabel"> Gender: </label>
-    				<input type="radio" name="Gender" v-model="newCustomer.gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
-    				<input type="radio" name="Gender" v-model="newCustomer.gender" value="Female" required> Female
+    				<input type="radio" name="Gender" v-model="gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+    				<input type="radio" name="Gender" v-model="gender" value="Female" required> Female
     		</div>
     		<!---Gender--->
 
@@ -88,20 +90,13 @@ Vue.component("register-user", {
     		</div>
     		<!---Submit Button----->
     		
-    		<div>
-    			<tr v-for="c in customers">
-					<td>{{c.name}}</td>
-					<td>{{c.surname }}</td>
-				</tr>
-    		</div>
-    		
       </form>
   </div>`,
   methods : {
 		createCustomer: function(customer) {
-			var c = {name:customer.name, surname:customer.surname, username:customer.username, password:customer.password,
-					birthdate:customer.birthdate, gender:null, userRole:"CUSTOMER", deleted:false, visitedFacilities:null,
-					customerType:null, collectedPoints:0.0}
+			var c = {username:customer.username, password:customer.password, name:customer.name, surname:customer.surname,
+					birthdate:customer.birthdate, gender:this.gender, userRole:'CUSTOMER', deleted:false, banned : false,  visitedFacilities:null,
+					customerType:null, collectedPoints:0.0, due : null}
 			axios
 	          .post('rest/customers/', c)
 	          .then(response => alert("Uspesno registrovan CUSTOMER MRTVI"))

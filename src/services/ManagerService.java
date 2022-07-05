@@ -1,6 +1,7 @@
 package services;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -10,8 +11,11 @@ import javax.ws.rs.Consumes;
 
 import javax.ws.rs.core.MediaType;
 
+import beans.Gender;
 import beans.Manager;
+import beans.UserRole;
 import dao.ManagerDao;
+import dto.ManagerDTO;
 
 
 @Path("/managers")
@@ -34,9 +38,30 @@ public class ManagerService extends BaseService {
 	@Path("/")	
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void createManger(Manager manager) {
+	public void createManger(ManagerDTO managerDTO) {
 		managerDao.setBasePath(getContext());
-		managerDao.create(manager);
+		
+		Manager manager = new Manager();
+		int year, day, month;
+	    String[] parts = managerDTO.getBirthdate().split("-");
+	    year = Integer.parseInt(parts[0]);
+	    month = Integer.parseInt(parts[1]);
+	    day = Integer.parseInt(parts[2]);               
+	
+	    @SuppressWarnings("deprecation")
+	    Date date = new Date(year - 1900, month - 1, day);
+	    manager.setName(managerDTO.getName());
+	    manager.setSurname(managerDTO.getSurname());
+	    manager.setUsername(managerDTO.getUsername());
+	    manager.setPassword(managerDTO.getPassword());
+	    manager.setGender(Gender.valueOf(managerDTO.getGender().toUpperCase()));
+	    manager.setUserRole(UserRole.valueOf(managerDTO.getUserRole()));
+	    manager.setDeleted(managerDTO.isDeleted());
+	    manager.setBanned(managerDTO.isBanned());
+	    manager.setBirthdate(date);
+	    manager.setSportFacilityId(managerDTO.getSportFacilityId());
+	    
+	    managerDao.create(manager);
 	}
 	
 	@GET
