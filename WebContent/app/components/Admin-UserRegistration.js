@@ -10,7 +10,7 @@ Vue.component("admin-userRegistration", {
 
 	template: `
 	
-	<div class="container">
+	<div class="container2">
       <form @submit.prevent="createUser(newUser)" autocomplete="on">
       <h1>User Registration</h1>
         <!--First name-->
@@ -85,7 +85,7 @@ Vue.component("admin-userRegistration", {
     		<!---Gender--->
     		
     		<!---ROLE----->
-    		<div>
+    		<div class = "box">
 	          <label for="gender" class="fl fontLabel"> User role </label>
 	    					<select v-model="userRole">
 								<option value="MANAGER">MANAGER</option>

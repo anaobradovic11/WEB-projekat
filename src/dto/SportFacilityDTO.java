@@ -16,11 +16,12 @@ public class SportFacilityDTO {
 	private double averageGrade;
 	private String openTime;
 	private String closeTime;
+	private String imageName;
 	
 	public SportFacilityDTO() {}
 	
 	public SportFacilityDTO(String sportFacilityId, String name, String type, ArrayList<String> facilityContent,
-			String isWorking, String location, double averageGrade, String openTime, String closeTime) {
+			String isWorking, String location, double averageGrade, String openTime, String closeTime, String imageName) {
 		super();
 		this.sportFacilityId = sportFacilityId;
 		this.name = name;
@@ -31,6 +32,7 @@ public class SportFacilityDTO {
 		this.averageGrade = averageGrade;
 		this.openTime = openTime;
 		this.closeTime = closeTime;
+		this.imageName = imageName;
 	}
 
 	public String getSportFacilityId() {
@@ -103,5 +105,12 @@ public class SportFacilityDTO {
 
 	public void setCloseTime(String closeTime) {
 		this.closeTime = closeTime;
+	}
+	
+	public String getImageName() {
+		return imageName;
+	}
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 }

@@ -67,6 +67,7 @@ public class SportFacilityService extends BaseService {
         sportFacility.setAverageGrade(sportFacilityDTO.getAverageGrade());
         sportFacility.setOpenTime(openTime);
         sportFacility.setCloseTime(closeTime);
+        sportFacility.setImageName(sportFacilityDTO.getImageName());
         
         sportFacilityDao.create(sportFacility);
     }

@@ -3,14 +3,14 @@ Vue.component("admin-createFacility", {
 		return{
 			managers : null,
 			selectedManager : {},
-			newFacility : {sportFacilityId : "", name : "", type : null, facilityContent : null, isWorking : false, location  : "", averageGrade : 0.0, openTime : null, closeTime : null},
+			newFacility : {sportFacilityId : "", name : "", type : null, facilityContent : null, isWorking : false, location  : "", averageGrade : 0.0, openTime : null, closeTime : null, imageName: ""},
 			facilityContent : []
 		}
 	},
 
 	template: `
 	
-	<div class="container">
+	<div class="container2">
       <form @submit.prevent="createFacility(newFacility)" autocomplete="on">
       <h1>Create Facility</h1>
         <!--sportFacilityId-->
@@ -77,14 +77,14 @@ Vue.component("admin-createFacility", {
 
     		<!---working----->
     		<div class="box radio">
-	          <label for="isWorking" class="fl fontLabel"> Gender: </label>
+	          <label for="isWorking" class="fl fontLabel"> Is it working? </label>
 	    				<input type="radio" name="Working" v-model="newFacility.isWorking" value="true"> Working &nbsp; &nbsp; &nbsp; &nbsp;
 	    				<input type="radio" name="Not working" v-model="newFacility.isWorking" value="false"> Not working
     		</div>
     		<!---working--->
     		
     		<!---type----->
-    		<div>
+    		<div class="box">
 	          <label for="gender" class="fl fontLabel"> Facility type </label>
 	    					<select v-model="newFacility.type">
 								<option value="GYM">GYM</option>
@@ -99,15 +99,15 @@ Vue.component("admin-createFacility", {
     		<!---CONTENT----->
 			<div>
 				<input type="checkbox" name="pl" value="Personal trainings">
-				<label for="Personal"> Personal trainings</label><br>
+				<label for="Personal"  > Personal trainings</label><br>
 				<input type="checkbox" name="pl" value="Group trainings">
-				<label for="Group"> Group trainings</label><br>
+				<label for="Group" > Group trainings</label><br>
 				<input type="checkbox" name="pl" value="Sauna">
-				<label for="Sauna"> Sauna </label><br>
+				<label for="Sauna" > Sauna </label><br>
 			</div>
 			
 			<!---manager of facility----->
-    		<div>
+    		<div class= "box">
 	          <label for="gender" class="fl fontLabel"> Manager </label>
 	          				<template>
 		    					<select v-model="selectedManager">
@@ -120,6 +120,14 @@ Vue.component("admin-createFacility", {
 									</template>
 								</select>
 							</template> 
+							
+							<button style="background: #2a6e3e" v-on:click="redirectToRegistration()">Add new manager</button>
+					<br></br>
+    		</div>
+    		
+    		<div class="box">
+    			<label for="fajl" class="fl fontLabel"> Select logo: </label>
+	    			<input type="file" id="filee" v-on:change="loadFile">
     		</div>
 
     		<!---Submit Button------>
@@ -139,7 +147,7 @@ Vue.component("admin-createFacility", {
 				    this.facilityContent.push(checkbox.value); 
 				}
 				var f = {sportFacilityId : facility.sportFacilityId , name : facility.name, type : facility.type, facilityContent : this.facilityContent, isWorking : facility.isWorking,
-				 location  : facility.location , averageGrade : 0.0, openTime : facility.openTime, closeTime : facility.closeTime}
+				 location  : facility.location , averageGrade : 0.0, openTime : facility.openTime, closeTime : facility.closeTime, imageName : facility.imageName}
 				axios
 		          .post('rest/sportFacilities/', f)
 		          .then(response => alert("Uspesno kreiran FACILITY MRTVI"))
@@ -154,6 +162,14 @@ Vue.component("admin-createFacility", {
 				  .catch(error =>  {
 							alert(error.message + " GRESKA U AZURIRANJU MENADZERA");
 						})
+		},
+		redirectToRegistration : function(){
+			router.push({ path : '/admin/userRegistration'});
+		},
+		loadFile : function(event){
+			var selectedFile = document.getElementById('filee');
+			selectedFile.src = URL.createObjectURL(event.target.files[0]);
+			console.log(selectedFile.value)
 		}
 	},
 	mounted () {

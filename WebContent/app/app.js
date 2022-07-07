@@ -1,7 +1,7 @@
-const HomePage = {template: '<div> <router-view></router-view></div>'}
+const HomePage = {template: '<div><navigation-bar></navigation-bar><router-view></router-view></div>'}
 const SportFacilities = {template: '<sport-facilities></sport-facilities>'}
-const Registration = {template: '<div> <register-user></register-user></div>'}
-const Login = {template: '<div><log-in></log-in></div>'}
+const Registration = {template: '<div> <navigation-bar></navigation-bar><register-user></register-user></div>'}
+const Login = {template: '<div><navigation-bar></navigation-bar><log-in></log-in></div>'}
 const Admin = {template: '<div><admin-navigation></admin-navigation><admin-home></admin-home></div>'}
 const Manager = {template: '<div><manager-navigation></manager-navigation><sport-facilities></sport-facilities></div>'}
 const Trainer = {template: '<div><trainer-navigation></trainer-navigation><sport-facilities></sport-facilities></div>'}

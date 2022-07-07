@@ -13,10 +13,11 @@ public class SportFacility {
 	private double averageGrade;
 	private Date openTime;
 	private Date closeTime;
+	private String imageName;
 	
 	public SportFacility() {}
 	public SportFacility(String sportFacilityId, String name, FacilityType type, ArrayList<String> facilityContent,
-			boolean status, String location, double averageGrade, Date openTime, Date closeTime) {
+			boolean status, String location, double averageGrade, Date openTime, Date closeTime, String imageName) {
 		super();
 		this.sportFacilityId = sportFacilityId;
 		this.name = name;
@@ -27,6 +28,7 @@ public class SportFacility {
 		this.averageGrade = averageGrade;
 		this.openTime = openTime;
 		this.closeTime = closeTime;
+		this.imageName = imageName;
 	}
 	public String getSportFacilityId() {
 		return sportFacilityId;
@@ -81,6 +83,12 @@ public class SportFacility {
 	}
 	public void setCloseTime(Date closeTime) {
 		this.closeTime = closeTime;
+	}
+	public String getImageName() {
+		return imageName;
+	}
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 
 	
