@@ -6,7 +6,7 @@
 	    "surname": "Markovic",
 	    "birthdate": null,
 	    "gender": "Male",
-	    "userRole": "CUSTOMER",
+	    "userRole": "MANAGER",
 	    "deleted": false,
 	    "sportFacilityId": "1"
   	}
