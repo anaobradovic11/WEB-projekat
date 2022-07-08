@@ -18,6 +18,11 @@ const ManagerFacility = {template: '<div><manager-navigation></manager-navigatio
 const ManagerCreateTraining = {template: '<div><manager-navigation></manager-navigation><manager-training></manager-training></div>'}
 const ManagerTrainingsView = {template: '<div><manager-navigation></manager-navigation><all-trainings></all-trainings></div>'}
 
+const AdminProfile = {template: '<div><admin-navigation></admin-navigation><admin-profile></admin-profile></div>'}
+const ManagerProfile = {template: '<div><manager-navigation></manager-navigation><manager-profile></manager-profile></div>'}
+const TrainerProfile = {template: '<div><trainer-navigation></trainer-navigation><trainer-profile></trainer-profile></div>'}
+const CustomerProfile = {template: '<div><customer-navigation></customer-navigation><customer-profile></customer-profile></div>'}
+
 const router = new VueRouter({
 	mode: 'hash',
 	routes: [
@@ -76,6 +81,18 @@ const router = new VueRouter({
 		},
 		{
 			path: '/manager/trainingsView', component: ManagerTrainingsView
+		},
+		{
+			path: '/admin/myProfile', component: AdminProfile
+		},
+		{
+			path: '/manager/myProfile', component: ManagerProfile
+		},
+		{
+			path: '/trainer/myProfile', component: TrainerProfile
+		},
+		{
+			path: '/customer/myProfile', component: CustomerProfile
 		}
 	]
 });

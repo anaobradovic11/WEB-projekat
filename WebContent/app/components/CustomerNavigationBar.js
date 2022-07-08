@@ -17,7 +17,9 @@ Vue.component("customer-navigation", {
           <a href="#"></i> About</a>
           <a href="#"></i> Services</a>
           <a href="#"></i> Skills</a>
-          <a href="#"></i> Contact</a>
+          <a href="#/customer/myProfile"></i> My Profile</a>
+          <a href="#/login" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+            LOG OUT</a>
         </nav>
       </div>
       </header>

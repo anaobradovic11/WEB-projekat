@@ -1,1 +1,32 @@
-{}
+{
+  "fitness": {
+    "name": "fitness",
+    "type": "Group trainings",
+    "sportFacilityId": "1",
+    "durationInMinutes": 60,
+    "trainerId": "trainer",
+    "description": "sjajan trening",
+    "deleted": false,
+    "imageName": "images/groupTrainings.png"
+  },
+  "form up": {
+    "name": "form up",
+    "type": "Personal trainings",
+    "sportFacilityId": "1",
+    "durationInMinutes": 30,
+    "trainerId": "trainer",
+    "description": "sjajan trening",
+    "deleted": false,
+    "imageName": "images/personalTrainings.png"
+  },
+  "sauna": {
+    "name": "sauna",
+    "type": "Sauna",
+    "sportFacilityId": "2",
+    "durationInMinutes": 30,
+    "trainerId": "trainer",
+    "description": "sjajan trening",
+    "deleted": false,
+    "imageName": "images/sauna.png"
+  }
+}

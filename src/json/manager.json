@@ -9,5 +9,16 @@
 	    "userRole": "MANAGER",
 	    "deleted": false,
 	    "sportFacilityId": "1"
+  	},
+	  "manager": {
+		"username": "manager",
+	    "password": "manager",
+	    "name": "Marko",
+	    "surname": "Markovic",
+	    "birthdate": null,
+	    "gender": "Male",
+	    "userRole": "MANAGER",
+	    "deleted": false,
+	    "sportFacilityId": "2"
   	}
 }
