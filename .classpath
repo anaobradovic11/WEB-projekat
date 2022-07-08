@@ -37,8 +37,11 @@
 	<classpathentry kind="lib" path="D:/Faks/6.semestar/Web programiranje/projekat/WEB-projekat/WebContent/WEB-INF/lib/gson-2.6.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/Faks/6.semestar/Web programiranje/projekat/WEB-projekat/WebContent/WEB-INF/lib/mimepull-1.9.6.jar"/>
+	<classpathentry kind="lib" path="D:/Faks/6.semestar/Web programiranje/projekat/WEB-projekat/WebContent/WEB-INF/lib/jersey-media-multipart-2.21.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
