@@ -1,4 +1,9 @@
 Vue.component("trainer-navigation", {
+	data : function(){
+		return{
+			logOutMessage : ""	
+		}
+	},
 	template: `
 <html lang="en" dir="ltr">
   <head>
@@ -18,7 +23,7 @@ Vue.component("trainer-navigation", {
           <a href="#"></i> Services</a>
           <a href="#"></i> Skills</a>
           <a href="#/trainer/myProfile"></i> My Profile</a>
-          <a href="#/login" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+          <a href="#/login" class="aj_btn" v-on:click="logOut()"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOG OUT</a>
         </nav>
       </div>
@@ -26,4 +31,13 @@ Vue.component("trainer-navigation", {
      </body>
 </html>
 	`,
+	methods : {
+		logOut : function(){
+			axios
+				.post('rest/login/logOut')
+				.then(response => {this.logOutMessage = response.data
+								toast(this.logOutMessage)
+				})
+		}
+	}
 });

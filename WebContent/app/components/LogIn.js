@@ -58,15 +58,16 @@ Vue.component("log-in", {
 			axios
 				.post('rest/login/logInStatus', this.user)
 				.then(response => {							
-					toast("Uspesno logovan korisnik MRTVI")
 					axios
 						.get('rest/login/loggedUser')
 						.then(response => {
 							if(response.data){
 								this.user = response.data
+								toast("Welcome" + this.user.username)
 								this.Redirect()
 							}else{
 								this.user = {username: this.username, "password" : this.password}
+								alert("Wrong credentials")
 							}
 														
 							})	
