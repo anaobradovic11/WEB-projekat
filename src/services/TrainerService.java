@@ -60,7 +60,17 @@ public class TrainerService extends BaseService{
 		ArrayList<Trainer> trainers = new ArrayList<Trainer>();
 		for(Training tr : trainings) {
 			Trainer t = getTrainerById(tr.getTrainerId());
-			trainers.add(t);
+			if(!trainers.isEmpty()) {
+				for(Trainer trainer : trainers) {
+					if(trainer.getUsername().equals(t.getUsername())) {
+						break;
+					} else {
+						trainers.add(trainer);
+					}
+				}
+			} else {
+				trainers.add(t);
+			}
 		}
 		return trainers;
 	}

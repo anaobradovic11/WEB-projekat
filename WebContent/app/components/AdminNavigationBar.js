@@ -1,4 +1,9 @@
 Vue.component("admin-navigation", {
+	data : function(){
+		return{
+			logOutMessage : ""	
+		}
+	},
 	template: `
 <html lang="en" dir="ltr">
   <head>
@@ -18,7 +23,7 @@ Vue.component("admin-navigation", {
           <a href="#/admin/userRegistration"></i> Register</a>
           <a href="#/admin/usersView"></i> All users</a>
           <a href="#/admin/myProfile"></i> My Profile</a>
-          <a href="#/login" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+          <a href="#/login" class="aj_btn" v-on:click="logOut()"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOG OUT</a>
         </nav>
       </div>
@@ -26,4 +31,13 @@ Vue.component("admin-navigation", {
      </body>
 </html>
 	`,
+	methods : {
+		logOut : function(){
+			axios
+				.post('rest/login/logOut')
+				.then(response => {this.logOutMessage = response.data
+								toast(this.logOutMessage)
+				})
+		}
+	}
 });
