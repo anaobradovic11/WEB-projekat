@@ -19,7 +19,7 @@ Vue.component("customer-navigation", {
         <i class="menu-toggle-btn fas fa-bars"></i>
         <nav class="navigation-menu">
           <a href="#/customer"><i class="fas fa-home home"></i> Home</a>
-          <a href="#"></i> About</a>
+          <a href="#/customer/dues"></i> Memberships </a>
           <a href="#"></i> Services</a>
           <a href="#"></i> Skills</a>
           <a href="#/customer/myProfile"></i> My Profile</a>

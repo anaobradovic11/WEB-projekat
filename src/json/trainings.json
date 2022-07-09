@@ -1,9 +1,9 @@
 {
   "fitness": {
     "name": "fitness",
-    "type": "Group trainings",
+    "type": "Personal trainings",
     "sportFacilityId": "1",
-    "durationInMinutes": 60,
+    "durationInMinutes": 45,
     "trainerId": "trainer",
     "description": "sjajan trening",
     "deleted": false,
@@ -24,7 +24,7 @@
     "type": "Sauna",
     "sportFacilityId": "2",
     "durationInMinutes": 30,
-    "trainerId": "trainer",
+    "trainerId": "trener",
     "description": "sjajan trening",
     "deleted": false,
     "imageName": "images/sauna.png"

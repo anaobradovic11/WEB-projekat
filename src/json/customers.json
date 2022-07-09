@@ -1,41 +1,32 @@
 {
-	"sdfsdf": {
-		"username": "sdfsdf",
-        "password": "sdfsdfsdf",
-        "name": "Nenad",
-        "surname": "Sredojevic",
-        "birthdate": null,
-        "gender": null,
-        "userRole": null,
-        "deleted": false,
-        "visitedFacilities": null,
-        "customerType": null,
-        "collectedPoints": 0.0,
-        "due": null  
-   },
-	  "Katarina": {
-	    "collectedPoints": 0.0,
-	    "username": "Katarina",
-	    "password": "1234",
-	    "name": "Katarina",
-	    "surname": "Artukov",
-	    "birthdate": "Jul 5, 2022, 2:00:00 AM",
+	"customercina": {
+	    "username": "customercina",
+	    "password": "customercina",
+	    "name": "Nenad",
+	    "surname": "Sredojevi?",
+	    "birthdate" : null,
+	    "gender" : "MALE",
+	    "userRole" : "CUSTOMER",
 	    "deleted": false,
-	    "banned": false
-	  },
-		"customer": {
-			"username": "customer",
-			"password": "customer",
-			"name": "shone",
-			"surname": "nenad",
-			"birthdate" : null,
-			"gender" : "MALE",
-			"userRole" : "CUSTOMER",
-			"deleted": false,
-			"banned": false,
-			"visitedFacilities" : null,
-			"customerType" : null,
-			"collectedPoints": 0.0,
-			"due" : null
-	}
+	    "banned": false,
+	    "visitedFacilities" : null,
+	    "customerType" : null,
+	    "collectedPoints": 0.0,
+	    "due" : null
+  },
+  	"customer": {
+	    "username": "customer",
+	    "password": "customer",
+	    "name": "shone",
+	    "surname": "nenad",
+	    "birthdate" : null,
+	    "gender" : "MALE",
+	    "userRole" : "CUSTOMER",
+	    "deleted": false,
+	    "banned": false,
+	    "visitedFacilities" : null,
+	    "customerType" : null,
+	    "collectedPoints": 0.0,
+	    "due" : null
+  }
 }

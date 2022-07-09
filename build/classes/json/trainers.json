@@ -8,5 +8,15 @@
 	    "gender" : "MALE",
 	    "userRole" : "COACH",
 	    "deleted": false
-  }
+	  },
+	  "trener": {
+		"username": "trener",
+		"password": "trener",
+		"name": "TRENER",
+		"surname": "TRENER",
+		"birthdate" : null,
+		"gender" : "MALE",
+		"userRole" : "COACH",
+		"deleted": false
+	}
 }
