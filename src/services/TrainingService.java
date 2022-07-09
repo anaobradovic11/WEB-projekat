@@ -50,6 +50,15 @@ public class TrainingService {
     }
     
     @GET
+	@Path("/getTrainingById/{trainingId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Training getTrainingById(@PathParam("trainingId") String trainingId) {
+		trainingDao.setBasePath(getContext());
+		return trainingDao.getById(trainingId);
+	}
+    
+    @GET
     @Path("/getTrainingsByFacilityId/{sportFacilityId}")
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Training> getTrainingsByFacilityId(@PathParam("sportFacilityId") String sportFacilityId) {
