@@ -48,6 +48,50 @@ section:nth-child(even){
     text-transform: uppercase;
 }
 
+.trainer-box{
+	padding:2.5rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height : 20rem;
+    width : 25rem;
+}
+.trainer-box img{
+    height:17rem;
+    margin:1rem 0;
+}
+
+.trainer-box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.trainer-box .stars{
+    padding:1rem 0;
+}
+
+.trainer-box .stars i{
+    font-size: 1.7rem;
+    color:var(--green);
+}
+
+.trainer-box span{
+    color:var(--green);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+.dishes .trainings{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap:1.5rem;
+    height : 15rem;
+}
+
 .facilityDetails-box{
 	padding:2.5rem;
     background:#fff;
