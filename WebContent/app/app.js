@@ -38,6 +38,7 @@ const ManagerFacilityDetailsView = {template: '<div><manager-navigation></manage
 
 const CustomerTrainingsView = {template: '<div><customer-navigation></customer-navigation><customer-trainings></customer-trainings></div> '}
 
+
 const router = new VueRouter({
 	mode: 'hash',
 	routes: [
@@ -141,6 +142,7 @@ const router = new VueRouter({
 		},
 		{
 			path: '/customer/trainingsView', component: CustomerTrainingsView
+
 		}
 	]
 });
