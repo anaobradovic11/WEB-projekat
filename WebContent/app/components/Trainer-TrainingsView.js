@@ -48,7 +48,7 @@ Vue.component("trainer-trainings", {
 	            <span>{{tr.durationInMinutes}} min</span>
 	            <br></br>
 	            <br></br>
-	            <div class="btn" v-on:click="redirectWithParam(tr.name)">Edit</div>
+	            <div class="btn" >Details</div>
 	        </div>
 	        
 	    </div>
