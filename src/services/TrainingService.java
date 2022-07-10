@@ -125,4 +125,13 @@ public class TrainingService {
         
     	trainingDao.create(training);
     }
+    
+    @POST
+    @Path("/noDTOtraining")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void createNoDTOTraining(Training training) {
+    	trainingDao.setBasePath(getContext());     
+    	trainingDao.create(training);
+    }
 }
