@@ -21,7 +21,6 @@ Vue.component("manager-navigation", {
           <a href="#/manager"><i class="fas fa-home home"></i> Home</a>
           <a href="#/manager/facility"></i> Your facility</a>
           <a href="#/manager/trainingsView"></i> All trainings</a>
-          <a href="#"></i> Skills</a>
           <a href="#/manager/myProfile"></i> My Profile</a>
           <a href="#/login" class="aj_btn" v-on:click="logOut()"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOG OUT</a>

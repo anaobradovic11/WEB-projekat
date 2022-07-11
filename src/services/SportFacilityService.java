@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.annotation.PostConstruct;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -80,5 +81,13 @@ public class SportFacilityService extends BaseService {
         
         sportFacilityDao.create(sportFacility);
     }
+	@DELETE
+	@Path("/{sportFacilityId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+	public void deleteFacility(@PathParam("sportFacilityId") String sportFacilityId) {
+		sportFacilityDao.setBasePath(getContext());
+		sportFacilityDao.delete(sportFacilityId);
+	}
 	
 }

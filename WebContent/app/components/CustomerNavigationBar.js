@@ -21,7 +21,6 @@ Vue.component("customer-navigation", {
           <a href="#/customer"><i class="fas fa-home home"></i> Home</a>
           <a href="#/customer/dues"></i> Memberships </a>
           <a href="#/customer/trainingsView"></i> Trainings</a>
-          <a href="#"></i> Skills</a>
           <a href="#/customer/myProfile"></i> My Profile</a>
           <a href="#/login" class="aj_btn" v-on:click="logOut()"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOG OUT</a>
