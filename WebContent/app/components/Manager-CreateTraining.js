@@ -14,9 +14,9 @@ Vue.component("manager-training", {
 
 	template: `
 	
-	<div class="container">
+	<div class="container2">
       <form @submit.prevent="createTraining(newTraining)" autocomplete="on">
-      <h1>Create Training</h1>
+      <h1> <font color="white">Create Training</font></h1>
       
       <!--name-->
     		<div class="box">
@@ -84,7 +84,7 @@ Vue.component("manager-training", {
     		</div>
 
     		<!---Submit Button------>
-    		<div class="box" style="background: #2d3e3f">
+    		<div class="box" >
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
     		</div>
     		

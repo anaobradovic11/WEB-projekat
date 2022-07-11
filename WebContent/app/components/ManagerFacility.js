@@ -34,7 +34,7 @@ Vue.component("manager-facility", {
 	
 	    <div class="box-container">
 	
-	        <div class="box" >
+	        <div class="manager-facility-box" >
 	            <a href="#" class="fas fa-heart"></a>
 	            <a href="#" class="fas fa-eye"></a>
 	            <img :src="sportFacility.imageName" alt="JEBISE"/>
@@ -43,8 +43,8 @@ Vue.component("manager-facility", {
 	            	Type: {{sportFacility.type}}
 	            </div>
 	            <h4>{{sportFacility.location}}</h4>
-	            <span>{{sportFacility.averageGrade}}</span>
-	            <br></br>
+	            <div>
+	            <span>{{sportFacility.averageGrade}}</span> </div>
 	            <span>{{ConvertWorking(sportFacility)}}</span>
 	            <div><a href="#/manager/createTraining" class="btn">Create training</a></div>
 	            <div><a href="#/manager/viewTrainers" class="btn">View trainers</a></div>

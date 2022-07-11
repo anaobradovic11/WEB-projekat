@@ -12,7 +12,7 @@ Vue.component("log-in", {
 	
 	<div class="container">
       <form @submit.prevent="LogIn" autocomplete="on">
-      <h1>Log In</h1>
+      <h1><font color="white">Log In</font></h1>
       
         <!--Username-->
     	<div class="box">
@@ -41,13 +41,13 @@ Vue.component("log-in", {
     		<!---Password---->
     		
     		<!---Submit Button------>
-    		<div class="box" style="background: #6a9294">
+    		<div class="box">
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT" v-on:click="Redirect()">
     		</div>
     		<!---Submit Button----->
     		
     		<tr>
-					<td><a href="#/register">Not Registered?</a></td>
+					<td><a href="#/register"><font color="#27ae60" size ="2px">Not Registered?</font></a></td>
 				</tr>
 	
 	 </form>
