@@ -12,7 +12,7 @@ Vue.component("admin-createFacility", {
 	
 	<div class="container2">
       <form @submit.prevent="createFacility(newFacility)" autocomplete="on">
-      <h1>Create Facility</h1>
+      <h1><font color="white">Create Facility</font></h1>
         <!--sportFacilityId-->
     		<div class="box">
           <label for="sportFacilityId" class="fl fontLabel"> Facility ID: </label>
@@ -99,11 +99,11 @@ Vue.component("admin-createFacility", {
     		<!---CONTENT----->
 			<div>
 				<input type="checkbox" name="pl" value="Personal trainings">
-				<label for="Personal"  > Personal trainings</label><br>
+				<label for="Personal"  ><font color="white" size="2px"> Personal trainings</font></label><br>
 				<input type="checkbox" name="pl" value="Group trainings">
-				<label for="Group" > Group trainings</label><br>
+				<label for="Group" > <font color="white" size="2px">Group trainings</font></label><br>
 				<input type="checkbox" name="pl" value="Sauna">
-				<label for="Sauna" > Sauna </label><br>
+				<label for="Sauna" > <font color="white" size="2px">Sauna </font></label><br>
 			</div>
 			
 			<!---manager of facility----->
@@ -121,7 +121,7 @@ Vue.component("admin-createFacility", {
 								</select>
 							</template> 
 							
-							<button style="background: #2a6e3e" v-on:click="redirectToRegistration()">Add new manager</button>
+							<button class="manager-btn" v-on:click="redirectToRegistration()">Add new manager</button>
 					<br></br>
     		</div>
     		
@@ -131,7 +131,7 @@ Vue.component("admin-createFacility", {
     		</div>
 
     		<!---Submit Button------>
-    		<div class="box" style="background: #2d3e3f">
+    		<div class="box">
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
     		</div>
     		

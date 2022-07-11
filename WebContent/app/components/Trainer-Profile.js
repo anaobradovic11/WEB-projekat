@@ -9,9 +9,9 @@ Vue.component("trainer-profile", {
 
 	template: `
 	
-	<div class="container">
+	<div class="container2">
       <form @submit.prevent="updateTrainer(trainer)" autocomplete="on">
-      <h1>Your profile</h1>
+      <h1><font color="white">Your profile</font></h1>
         <!--First name-->
     		<div class="box">
           <label for="firstName" class="fl fontLabel"> First Name: </label>
@@ -76,7 +76,7 @@ Vue.component("trainer-profile", {
     		<!--BIRTHDATE----->
 
     		<!---Submit Button------>
-    		<div class="box" style="background: #2d3e3f">
+    		<div class="box" >
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
     		</div>    		
       </form>

@@ -12,7 +12,7 @@ Vue.component("admin-userRegistration", {
 	
 	<div class="container2">
       <form @submit.prevent="createUser(newUser)" autocomplete="on">
-      <h1>User Registration</h1>
+      <h1><font color="white">User Registration</font></h1>
         <!--First name-->
     		<div class="box">
           <label for="firstName" class="fl fontLabel"> First Name: </label>
@@ -104,7 +104,7 @@ Vue.component("admin-userRegistration", {
     		</div>
 
     		<!---Submit Button------>
-    		<div class="box" style="background: #2d3e3f">
+    		<div class="box" >
     				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
     		</div>
     		

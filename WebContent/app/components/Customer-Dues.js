@@ -43,12 +43,14 @@ Vue.component("customer-dues", {
 	    	<h2 class="membership-sub-heading">Sessions: {{dueByCustomer.numberOfSession}}</h2>
 	    	<h2 class="membership-sub-heading">Expire date: {{dueByCustomer.dateAndTimeOfValidity|dateFormat('DD-MM-YYYY')}}</h2>
 	    </div>
+	    <br></br>
+	    
+	    <br></br>
 	
 	    <div class="box-container">
 	
-	        <div class="box" v-for="due in predefinedDues">
-	            <a href="#" class="fas fa-heart"></a>
-	            <a href="#" class="fas fa-eye"></a>
+	        <div class="trainer-box" v-for="due in predefinedDues">
+	           
 	            <h3>{{due.type}}</h3>	           
 	            <span>{{due.price}} din</span>
 	            <h3>
