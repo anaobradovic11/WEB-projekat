@@ -40,6 +40,7 @@ const CustomerTrainingsView = {template: '<div><customer-navigation></customer-n
 const NotLoggedFacilityDetailsView = {template: '<div><navigation-bar></navigation-bar><details-view></details-view></div> '}
 
 
+
 const router = new VueRouter({
 	mode: 'hash',
 	routes: [
@@ -143,6 +144,7 @@ const router = new VueRouter({
 		},
 		{
 			path: '/customer/trainingsView', component: CustomerTrainingsView
+
 		},
 		{
 			path: '/detailsView', name : 'NotLoggedDetailsView',component: NotLoggedFacilityDetailsView
