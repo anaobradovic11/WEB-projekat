@@ -20,8 +20,6 @@ Vue.component("trainer-navigation", {
         <nav class="navigation-menu">
           <a href="#/trainer"><i class="fas fa-home home"></i> Home</a>
           <a href="#/trainer/trainingsView"></i> Your trainings</a>
-          <a href="#"></i> Services</a>
-          <a href="#"></i> Skills</a>
           <a href="#/trainer/myProfile"></i> My Profile</a>
           <a href="#/login" class="aj_btn" v-on:click="logOut()"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOG OUT</a>

@@ -95,7 +95,7 @@ Vue.component("manager-training", {
   	methods : {
 		createTraining: function(training) {
 				var t = {name : training.name, type : training.type, sportFacilityId : this.manager.sportFacilityId, durationInMinutes : training.durationInMinutes, trainerId  : this.selectedTrainer.username,
-						 description : training.description, deleted : false, imageName : ""}
+						 description : training.description, deleted : false, imageName : "images/training.png"}
 						 
 				for(let tr of this.trainingsInFacility){
 					if(tr.name === training.name){
