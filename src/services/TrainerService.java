@@ -62,11 +62,11 @@ public class TrainerService extends BaseService{
 		for(Training tr : trainings) {
 			Trainer t = getTrainerById(tr.getTrainerId());
 			if(!trainers.isEmpty()) {
-				for(Trainer trainer : trainers) {
+				for(Trainer trainer : getAllTrainers()) {
 					if(trainer.getUsername().equals(t.getUsername())) {
 						break;
 					} else {
-						trainers.add(trainer);
+						trainers.add(t);
 					}
 				}
 			} else {

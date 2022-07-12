@@ -1,24 +1,46 @@
 {
-	"menadzer": {
-		"username": "menadzer",
-	    "password": "m1",
-	    "name": "Marko",
-	    "surname": "Markovic",
-	    "birthdate": null,
-	    "gender": "Male",
-	    "userRole": "MANAGER",
-	    "deleted": false,
-	    "sportFacilityId": "1"
-  	},
-	  "manager": {
-		"username": "manager",
-	    "password": "manager",
-	    "name": "Marko",
-	    "surname": "Markovic",
-	    "birthdate": null,
-	    "gender": "Male",
-	    "userRole": "MANAGER",
-	    "deleted": false,
-	    "sportFacilityId": "2"
-  	}
+  "m": {
+    "username": "m",
+    "password": "m",
+    "name": "Stasa",
+    "surname": "Koprivica",
+    "birthdate": "Jun 15, 2022, 2:36:51 AM",
+    "gender": "MALE",
+    "userRole": "MANAGER",
+    "deleted": false,
+    "sportFacilityId": "1"
+  },
+  "mng": {
+    "username": "mng",
+    "password": "mng",
+    "name": "Stefan",
+    "surname": "Stanic",
+    "birthdate": "Jun 15, 2022, 2:36:51 AM",
+    "gender": "MALE",
+    "userRole": "MANAGER",
+    "deleted": false,
+    "sportFacilityId": "2"
+  },
+  "manager": {
+    "username": "manager",
+    "password": "manager",
+    "name": "Jelena",
+    "surname": "Trbojevic",
+    "birthdate": "Jun 15, 2022, 2:36:51 AM",
+    "gender": "FEMALE",
+    "userRole": "MANAGER",
+    "deleted": false,
+    "sportFacilityId": "3"
+  },
+  "menadzer": {
+    "username": "menadzer",
+    "password": "menadzer",
+    "name": "Marija",
+    "surname": "Krnic",
+    "birthdate": "Jun 15, 2022, 2:36:51 AM",
+    "gender": "FEMALE",
+    "userRole": "MANAGER",
+    "deleted": false,
+    "sportFacilityId": "4"
+  }
 }

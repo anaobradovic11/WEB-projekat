@@ -1,12 +1,12 @@
-{  
-	"admin": {
+{
+  	"admin": {
 	    "username": "admin",
 	    "password": "admin",
-	    "name": "admin",
-	    "surname": "admin",
-	    "birthdate" : null,
+	    "name": "Dejan",
+	    "surname": "Poznanovic",
+	    "birthdate" : "Jun 11, 2000, 2:36:51 AM",
 	    "gender" : "MALE",
 	    "userRole" : "ADMIN",
 	    "deleted": false
-	  }
+  }
 }
