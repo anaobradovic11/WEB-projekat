@@ -39,10 +39,10 @@ Vue.component("admin-trainers", {
 	            <a href="#" class="fas fa-heart"></a>
 	            <a href="#" class="fas fa-eye"></a>
 	            <h3>{{ru.name}}</h3>
-	            <div>
-	            	Type: {{ru.surname}}
-	            </div>
-	            <h4>{{ru.username}}</h4>
+	            <h3>
+	            	{{ru.surname}}
+	            </h3>
+	            <h4>Username : {{ru.username}}</h4>
 	            <span>{{ru.userRole}}</span>
 	            <br></br>
 	            <span>{{ConvertBanned(ru)}}</span>

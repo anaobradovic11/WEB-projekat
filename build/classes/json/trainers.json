@@ -1,22 +1,22 @@
 {
-	"trainer": {
-	    "username": "trainer",
-	    "password": "trainer",
-	    "name": "PROBAA",
-	    "surname": "PROBA",
-	    "birthdate" : null,
+	"trener": {
+	    "username": "trener",
+	    "password": "trener",
+	    "name": "Igor",
+	    "surname": "Cebotarev",
+	    "birthdate" : "Jul 10, 2003, 2:36:51 AM",
 	    "gender" : "MALE",
 	    "userRole" : "COACH",
 	    "deleted": false
-	  },
-	  "trener": {
-		"username": "trener",
-		"password": "trener",
-		"name": "TRENER",
-		"surname": "TRENER",
-		"birthdate" : null,
-		"gender" : "MALE",
-		"userRole" : "COACH",
-		"deleted": false
-	}
+  },
+  "trainer": {
+	    "username": "trainer",
+	    "password": "trainer",
+	    "name": "Aleksandar",
+	    "surname": "Golubovic",
+	    "birthdate" : "Jun 11, 2000, 2:36:51 AM",
+	    "gender" : "MALE",
+	    "userRole" : "COACH",
+	    "deleted": false
+  }
 }

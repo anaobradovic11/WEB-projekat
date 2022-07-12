@@ -13,26 +13,17 @@
     "trainingDate": "Jul 10, 2022, 2:36:51 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 2:36:51 AM",
     "trainingId": "fitness",
-    "customerId": "customer",
+    "customerId": "kast",
     "trainerId": "trainer",
-    "deleted": false
-  },
-  "3": {
-    "id": "3",
-    "trainingDate": "Jul 15, 2022, 2:36:51 AM",
-    "dateAndTimeOfSign": "Jun 15, 2022, 2:36:51 AM",
-    "trainingId": "form up",
-    "customerId": "customercina",
-    "trainerId": "trener",
     "deleted": false
   },
   "4": {
     "id": "4",
     "trainingDate": "Jul 22, 2022, 12:00:00 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 12:00:00 AM",
-    "trainingId": "form up2",
+    "trainingId": "body balans",
     "customerId": "customer",
-    "trainerId": "trainer",
+    "trainerId": "trener",
     "deleted": true
   },
   "5": {
@@ -40,7 +31,7 @@
     "trainingDate": "Jul 9, 2022, 2:36:51 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 2:36:51 AM",
     "trainingId": "form up",
-    "customerId": "customer",
+    "customerId": "custom",
     "trainerId": "trainer",
     "deleted": false
   },
@@ -57,25 +48,25 @@
     "id": "7",
     "trainingDate": "Jul 9, 2022, 2:36:51 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 2:36:51 AM",
-    "trainingId": "form up",
-    "customerId": "customer",
-    "trainerId": "trainer",
+    "trainingId": "kardio",
+    "customerId": "cs",
+    "trainerId": "trener",
     "deleted": false
   },
   "8": {
     "id": "8",
     "trainingDate": "Jul 22, 2022, 12:00:00 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 12:00:00 AM",
-    "trainingId": "form up2",
-    "customerId": "customer",
-    "trainerId": "trainer",
+    "trainingId": "body balans",
+    "customerId": "cs",
+    "trainerId": "trener",
     "deleted": false
   },
   "9": {
     "id": "9",
     "trainingDate": "Jul 22, 2022, 12:00:00 AM",
     "dateAndTimeOfSign": "Jun 15, 2022, 12:00:00 AM",
-    "trainingId": "form up2",
+    "trainingId": "fitness",
     "customerId": "custom",
     "trainerId": "trainer",
     "deleted": true
